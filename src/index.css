@@ -1,0 +1,31 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-ku-navy: #0f2f53;
+  --color-ku-navy-2: #153b66;
+  --color-ku-gold: #b79761;
+  --color-ku-gold-light: #d7c08f;
+  --color-ku-cream: #eef2f7;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    margin: 0;
+    font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #0f2f53;
+  }
+}
+
+@layer components {
+  .panel {
+    @apply rounded-3xl border border-ku-gold/20 bg-ku-navy/45 p-6 shadow-lg shadow-black/15 transition duration-300;
+  }
+
+  .input-field {
+    @apply w-full rounded-2xl border border-ku-gold/25 bg-ku-navy/45 px-4 py-3 text-sm text-ku-cream placeholder:text-ku-cream/50 outline-none transition focus:border-ku-gold focus:ring-2 focus:ring-ku-gold/25;
+  }
+}
